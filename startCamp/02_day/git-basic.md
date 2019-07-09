@@ -30,9 +30,9 @@
 
       `staging area`(git add 로 추가한 파일들이 담기는 곳) 에 있는 내용을 이력으로 기록한다.
 
-        ```
-      $ git commit -m "커밋 메세지"  
-        ```
+    ```
+    $ git commit -m "커밋 메세지"  
+    ```
       
       
       
@@ -42,9 +42,9 @@
 
       커밋할 목록에 담겨있는지 혹은 untracked 인지, 커밋할 내역이 있는지 등등 다양한 정보를 제공한다.
       
-      ```
-$ git status
-      ```
+   ```
+   $ git status
+   ```
       
       
 
@@ -54,7 +54,7 @@ $ git status
       현재까지 커밋된 모든 이력을 확인할 수 있다.
 
       ```
-    $ git log
+      $ git log
       ```
 
 
@@ -76,7 +76,7 @@ $ git status
    ```
    $ git remote -v
    origin  https://github.com/JeesooHaa/TIL.git (fetch)
-origin  https://github.com/JeesooHaa/TIL.git (push)
+   origin  https://github.com/JeesooHaa/TIL.git (push)
    ```
    
    
