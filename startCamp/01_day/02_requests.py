@@ -13,4 +13,3 @@ soup = bs4.BeautifulSoup(html, 'html.parser')
 kospi = soup.select_one('#KOSPI_now').text
 
 print(kospi)
-  

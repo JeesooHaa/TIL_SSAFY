@@ -8,4 +8,3 @@ lines.reverse() # list 를 반대로 뒤집는다.
 with open('reversed_ssafy.txt', 'w') as f:
     for line in lines:
         f.write(line)
-            

@@ -16,4 +16,3 @@ with open('dinner.csv', 'w', encoding='utf-8', newline='') as f:
     csv_writer = csv.writer(f) # f 라는 파일에 csv 를 작성하는 객체를 생성
     for item in dinner.items():
         csv_writer.writerow(item)
-    

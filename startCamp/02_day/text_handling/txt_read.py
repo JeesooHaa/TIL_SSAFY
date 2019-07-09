@@ -11,4 +11,3 @@ with open('with_ssafy.txt', 'r') as f:
     lines = f.readlines()
     for line in lines:
         print(line.strip()) # 개행 문자 제거! (print 자체에 개행 문자)
-    

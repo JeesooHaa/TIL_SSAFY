@@ -11,4 +11,3 @@ with open('with_ssafy.txt', 'w') as f: # 컨텍스트 매니저
             
 with open('ssafy.txt', 'w', encoding='utf-8') as f:
     f.writelines(['0\n', '1\n', '2\n', '3\n'])
-        
