@@ -9,3 +9,4 @@ for filename in filenames:
     extension = os.path.splitext(filename)[-1] # 확장자만 따로 분리
     if extension == '.txt':
         os.rename(filename, filename.replace('SAMSUNG_', 'SSAFY_')) # 첫번째 인자로 넘어간 이름을, 두번째 인자로 넘어간 이름으로 바꾼다.
+    
