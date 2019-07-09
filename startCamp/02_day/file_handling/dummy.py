@@ -9,3 +9,4 @@ for i in range(500):
     cmd = f"touch {i+1}_{random.choice(family)}{random.choice(given)}.txt"
     print(cmd)
     os.system(cmd)
+    
