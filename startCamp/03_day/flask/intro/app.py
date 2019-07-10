@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import datetime
 import random
 app = Flask(__name__)
@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route("/") # endpoint 
 def hello(): # def 함수 만드는 법 
-    return "Hello!"
+    # return "Hello!"
+    return render_template('index.html') # 폴더 이름 templates / app.py 와 같은 위치 
     
 
 @app.route('/ssafy')
@@ -37,15 +38,17 @@ def html_lines():
     </ul>
     ''' 
 
+
 # Variable Routing 
 @app.route('/greeting/<name>') # IU
 def greeting(name): # name == IU
-    return f'반갑습니다! {name} 님!'
+    return render_template('greeting.html', html_name=name)
 
 
 @app.route('/cube/<int:num>')
 def cube(num):
-    return f'{num}의 3 제곱은 {num ** 3} 입니다.'
+    # return f'{num}의 3 제곱은 {num ** 3} 입니다.'
+    return render_template('cube.html', num_1=num, num_2=num ** 3)
 
 
 #실습
@@ -55,6 +58,12 @@ def lunch(people):
     menu = ['짜장면', '만둣국', '볶음밥', '마파두부덮밥']
     order = random.sample(menu, people) # 비복원 추출 
     return str(order)
+
+
+@app.route('/movie')
+def movie():
+    movies = ['트루먼쇼', '스파이더맨', '토이스토리4', '기생충', '알라딘']
+    return render_template('movie.html', movies=movies)
 
 
 if __name__ == '__main__': # 직접 호출할 때만 서버로 활용 
