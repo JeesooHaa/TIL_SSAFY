@@ -7,6 +7,8 @@ response = requests.get(url)
 
 html = response.text
 
+print(html)
+
 soup = bs4.BeautifulSoup(html, 'html.parser')
 rank = soup.select('.ah_l .ah_item .ah_a .ah_k ')
 
