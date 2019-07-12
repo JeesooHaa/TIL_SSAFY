@@ -14,15 +14,22 @@ for i in range(1,7):
     lotto_drw.append(lotto_info[f'drwtNo{i}'])
 
 lotto_true = []
-for i in lotto_numbers:
-    lotto_true.append(i in lotto_drw)
-
-print(lotto_true)
-
 aa = 0 
-for i in lotto_true:
-    if i == True:
+for i in lotto_numbers22:
+    cc = i in lotto_drw
+    if cc == True:
         aa += 1
+
+print(aa)
+
+# lotto_true = []
+# for i in lotto_numbers:
+#     lotto_true.append(i in lotto_drw)
+
+# aa = 0 
+# for i in lotto_true:
+#     if i == True:
+#         aa += 1
 
 lotto_bonus_num = lotto_info['bnusNo']
 
@@ -41,13 +48,9 @@ if lotto_bonus_num in lotto_numbers22:
 else:
     bb = 4 
 
-
-
 if aa == 6:
     rank = '1등'
 elif (aa == 5) and (bb == 5):
     rank = '2등'
 
 print(rank)
-
-
