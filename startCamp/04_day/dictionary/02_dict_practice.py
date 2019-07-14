@@ -122,11 +122,38 @@ print('==== Q3-2 ====')
 # print(min(city))
 
 
-
-
-
-
 # 3-3. 위에서 서울은 영상 2도였던 적이 있나요?
 
 # 아래에 코드를 작성해 주세요.
 print('==== Q3-3 ====')
+
+
+# 3-2. 도시 중에 최근 3일 중에 가장 추웠던 곳, 가장 더웠던 곳은?
+count = 0
+for name, temp in city.items():
+    # 첫 번째 시행 때
+    # 단 한번만 실행되는 조건이 필요해서 count 변수 사용
+    if count == 0:
+        hot_temp = max(temp)
+        cold_temp = min(temp)
+        hot_city = name
+        cold_city = name
+    else:
+        # 최저 온도가 cold_temp 보다 낮으면, cold_temp 에 값을 새로 넣고,
+        if min(temp) < cold_temp:
+            cold_temp = min(temp)
+            cold_city = name
+        # 최고 온도가 hot_temp 보다 높으면, hot_temp 에 값을 새로 넣는다.
+        if max(temp) > hot_temp:
+            hot_temp = max(temp)
+            hot_city = name
+    count += 1
+
+print(f'최고로 더웠던 지역은 {hot_city} {hot_temp} 였고, 최고로 추웠던 지역은 {cold_city} {cold_temp} 였다.')
+
+
+# 3-3. 위에서 서울은 영상 2도였던 적이 있나요?
+if 2 in city['서울']:
+    print('네 있어요')
+else:
+    print('아니요 없어요')
