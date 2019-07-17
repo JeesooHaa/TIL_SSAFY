@@ -1,4 +1,4 @@
-<center># Today I Learned</center>
+# Today I Learned
 
 ### 01 Day
 
